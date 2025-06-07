@@ -62,7 +62,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     # 🔐 Замінити на свій Telegram токен
-    TELEGRAM_TOKEN = "7864290193:AAGZhC7xGrA4SYqE8jVXukFfEKtt3uFs2b4"
+    TELEGRAM_TOKEN = ""
 
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
