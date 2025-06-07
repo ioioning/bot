@@ -1,4 +1,8 @@
 import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 import ollama
 from telegram import Update
 from telegram.ext import (
@@ -7,6 +11,7 @@ from telegram.ext import (
     MessageHandler,
     filters,
     CommandHandler,
+
 )
 
 # 🔧 Налаштування логів
@@ -62,7 +67,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     # 🔐 Замінити на свій Telegram токен
-    TELEGRAM_TOKEN = ""
+    TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
     app.add_handler(CommandHandler("start", start))

@@ -26,4 +26,5 @@
 1. Встанови ollama: https://ollama.com
 2. Завантаж модель (наприклад, llama3:8b):
 
+![Аватар бота](botpicture.jpg)
 
